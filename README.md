@@ -14,10 +14,10 @@ a machine learning engineer project
 4.DOCKER DIRECTORY
  -> Dockerisation of the API created in previous dir
  
-5. AUTOMATED UNITARY TESTS OF the dockerized API
+5.AUTOMATED UNITARY TESTS OF the dockerized API
  -> automated trials of the API
 
-6. KUBERNETES ORCHESTRATION  
+6.KUBERNETES ORCHESTRATION  
  -> orchestration manifest for a 3 pods version of K8s 
 
  
