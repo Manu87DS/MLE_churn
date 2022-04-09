@@ -1,0 +1,10 @@
+version: '3'
+services:
+  MLE_churn:
+    image: 9876543210a/pf:latest  # à téléverser
+    network_mode: host
+  mleproject_test:
+    depends_on:
+      - MLE_churn
+    image: 9876543210a/pf:latest # à téléverser
+    network_mode: host
