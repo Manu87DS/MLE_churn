@@ -3,7 +3,7 @@ a machine learning engineer project
 
 1.NOTEBOOKS DIRECTORY
  -> cleaning and encoding of datas
- -> ML models entertainment and fine tuning of hyperamaters
+ -> ML models entertainment and fine tuning of hyperparameters
 
 2.MODELS DIRECTORY
  -> Recording of most relevant models created inside notebooks
