@@ -1,0 +1,6 @@
+FROM alpine:latest
+
+COPY tests.py /files/
+WORKDIR files
+RUN apt-get update && apt-get install python3-pip -y && pip3 install requests
+CMD python3 /files/tests.py >> /files/monvol/resultats.log
