@@ -1,0 +1,29 @@
+
+version: "3"
+
+services:
+  api:
+    image: 9876543210a/main:latest  # téléversée dans dockerhub
+    container_name: container_api_mle  ##
+    networks:
+      - projet
+    ports:
+      - "8000:8000"
+  tests:
+    depends_on :
+      - api
+    image: 9876543210a/test:1.0  # téléversée dans dockerhub
+    networks : 
+      - projet
+    container_name : container_test_api_mle ##
+    volumes :
+      - mon_volume:/files/monvol
+    environment:
+      API_IP: container_api
+networks:
+    projet :
+volumes:
+    mon_volume : {}
+
+
+# https://stackoverflow.com/questions/55522620/docker-compose-yml-container-name-and-hostname#:~:text=container_name%3A%20sets%20the%20actual%20name,names%20for%20inter%2Dcontainer%20communication.
