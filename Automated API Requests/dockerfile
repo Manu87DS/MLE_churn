@@ -1,0 +1,21 @@
+
+#FROM alpine:latest
+#COPY testnew.py /files/
+#WORKDIR files
+#RUN apt-get update && apt-get install python3-pip -y &&  pip3 install fastapi requests uvicorn
+#CMD python3 /files/testnew.py >> /files/monvol/resultats.log
+
+
+FROM ubuntu:20.04
+
+ADD testnew.py  /files/
+
+WORKDIR files
+
+RUN apt update && apt install python3-pip -y && pip install fastapi requests uvicorn
+
+EXPOSE 8000
+
+CMD python /files/testnew.py >> /files/monvol/resultats.log
+
+
