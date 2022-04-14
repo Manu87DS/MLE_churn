@@ -1,0 +1,15 @@
+
+FROM ubuntu:20.04
+
+ADD test.py  /files/
+
+WORKDIR files
+
+#RUN apt update && apt install python3-pip -y && pip install fastapi requests uvicorn
+RUN apt-get update && apt-get install python3-pip -y && pip3 install fastapi && pip3 install requests && pip3 install uvicorn
+
+EXPOSE 8000
+
+CMD python /files/test.py >> /files/monvol/resultats.log
+
+
