@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-fastapi-deployment
+  labels:
+    app: my-fastapi
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: my-fastapi
+  template:
+    metadata:
+      labels:
+        app: my-fastapi
+    spec:
+      containers:
+      - name: my-container-fast-api
+        image: 9876543210a/detect_churn_api
+        ports:
+        - containerPort: 8000
